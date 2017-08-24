@@ -1,5 +1,4 @@
 import com.github.pauldambra.moduluschecker.Account.BankAccount;
-
 import org.junit.Test;
 
 import java.util.stream.Stream;

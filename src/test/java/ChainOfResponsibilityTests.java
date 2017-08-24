@@ -1,5 +1,5 @@
-import com.github.pauldambra.moduluschecker.chain.ModulusChainLink;
 import com.github.pauldambra.moduluschecker.ModulusCheckParams;
+import com.github.pauldambra.moduluschecker.chain.ModulusChainLink;
 import com.github.pauldambra.moduluschecker.chain.ModulusResult;
 import org.junit.Test;
 

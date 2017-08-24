@@ -4,7 +4,7 @@ import com.github.pauldambra.moduluschecker.Account.BankAccount;
 import com.github.pauldambra.moduluschecker.ModulusCheckParams;
 import com.google.common.base.Charsets;
 import com.google.common.base.Splitter;
-import com.google.common.collect.*;
+import com.google.common.collect.ImmutableList;
 import com.google.common.io.Resources;
 
 import java.io.IOException;

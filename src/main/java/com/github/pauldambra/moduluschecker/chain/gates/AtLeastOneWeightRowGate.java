@@ -21,7 +21,7 @@ public final class AtLeastOneWeightRowGate implements ModulusChainLink {
         params = modulusWeightRows.FindFor(params.account);
 
         return params.firstWeightRow.isPresent()
-            ? next.check(params)
-            : new ModulusResult(Optional.of(false), Optional.empty());
+                ? next.check(params)
+                : new ModulusResult(Optional.of(false), Optional.empty());
     }
 }

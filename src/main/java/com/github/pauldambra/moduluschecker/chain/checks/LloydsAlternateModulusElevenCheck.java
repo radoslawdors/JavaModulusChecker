@@ -4,7 +4,6 @@ import com.github.pauldambra.moduluschecker.Account.BankAccount;
 import com.github.pauldambra.moduluschecker.ModulusCheckParams;
 import com.github.pauldambra.moduluschecker.valacdosFile.WeightRow;
 
-import java.util.Optional;
 import java.util.function.Function;
 
 public final class LloydsAlternateModulusElevenCheck {

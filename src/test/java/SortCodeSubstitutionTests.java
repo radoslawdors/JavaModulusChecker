@@ -15,9 +15,9 @@ public class SortCodeSubstitutionTests {
     @Test
     public void SortCodesNotInTheTableAreUnchanged() {
 
-        ImmutableMap<String,String> substitutions = ImmutableMap.<String, String>builder()
-                                                .put("not_the_sort_code", "12345")
-                                                .build();
+        ImmutableMap<String, String> substitutions = ImmutableMap.<String, String>builder()
+                .put("not_the_sort_code", "12345")
+                .build();
 
         SortCodeSubstitution sortCodeSubstitution = new SortCodeSubstitution(substitutions);
         BankAccount originalAccount = BankAccount.Of("012345", "01234567");
@@ -31,7 +31,7 @@ public class SortCodeSubstitutionTests {
     @Test
     public void SortCodesInTheTableAreChanged() {
 
-        ImmutableMap<String,String> substitutions = ImmutableMap.<String, String>builder()
+        ImmutableMap<String, String> substitutions = ImmutableMap.<String, String>builder()
                 .put("012345", "543210")
                 .build();
 

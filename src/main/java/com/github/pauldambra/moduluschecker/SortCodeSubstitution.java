@@ -40,14 +40,14 @@ public class SortCodeSubstitution {
         String text = Resources.toString(url, Charsets.UTF_8);
 
         Map<String, String> substitutions = newlineSplitter
-                                                .splitToList(text)
-                                                .stream()
-                                                .map(spaceSplitter::splitToList)
-                                                .filter(r -> r.size() != 0)
-                                                .collect(Collectors.toMap(
-                                                        ss -> ss.get(0),
-                                                        ss -> ss.get(1)
-                                                ));
+                .splitToList(text)
+                .stream()
+                .map(spaceSplitter::splitToList)
+                .filter(r -> r.size() != 0)
+                .collect(Collectors.toMap(
+                        ss -> ss.get(0),
+                        ss -> ss.get(1)
+                ));
 
         return new SortCodeSubstitution(substitutions);
     }

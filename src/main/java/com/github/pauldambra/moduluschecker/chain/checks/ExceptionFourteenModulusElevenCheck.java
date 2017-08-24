@@ -2,11 +2,9 @@ package com.github.pauldambra.moduluschecker.chain.checks;
 
 import com.github.pauldambra.moduluschecker.Account.BankAccount;
 import com.github.pauldambra.moduluschecker.ModulusCheckParams;
-import com.github.pauldambra.moduluschecker.valacdosFile.WeightRow;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Second check:
@@ -21,7 +19,7 @@ import java.util.Optional;
  */
 public final class ExceptionFourteenModulusElevenCheck {
 
-    private final List<Integer> allowedValuesAtH = Arrays.asList(0,1,9);
+    private final List<Integer> allowedValuesAtH = Arrays.asList(0, 1, 9);
 
     public Boolean check(ModulusCheckParams params) {
 

@@ -1,8 +1,8 @@
 import com.github.pauldambra.moduluschecker.Account.BankAccount;
 import com.github.pauldambra.moduluschecker.ModulusAlgorithm;
 import com.github.pauldambra.moduluschecker.ModulusCheckParams;
-import com.github.pauldambra.moduluschecker.valacdosFile.WeightRow;
 import com.github.pauldambra.moduluschecker.chain.checks.ModulusElevenCheck;
+import com.github.pauldambra.moduluschecker.valacdosFile.WeightRow;
 import com.google.common.collect.ImmutableList;
 import org.junit.Test;
 

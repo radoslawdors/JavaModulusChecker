@@ -1,14 +1,16 @@
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
-
 import com.github.pauldambra.moduluschecker.ModulusChecker;
 import org.junit.Test;
 
 import java.io.IOException;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+
 public class VocalinkTestCases {
-    private static ModulusChecker modulusChecker() throws IOException {return new ModulusChecker(); }
+    private static ModulusChecker modulusChecker() throws IOException {
+        return new ModulusChecker();
+    }
 
     public static class ExceptionOne {
         @Test
@@ -38,6 +40,7 @@ public class VocalinkTestCases {
         public void WhereSecondPassesWithNoMatchWeights() throws IOException {
             assertVocalinkTestCase("309070", "12345677", true);
         }
+
         @Test
         public void WhereSecondPassesUsingOneMatchWeight() throws IOException {
             assertVocalinkTestCase("309070", "99345694", true);
@@ -49,10 +52,12 @@ public class VocalinkTestCases {
         public void CEqualsSixSoIgnoreSecondCheck() throws IOException {
             assertVocalinkTestCase("820000", "73688637", true);
         }
+
         @Test
         public void CEqualsNineSoIgnoreSecondCheck() throws IOException {
             assertVocalinkTestCase("827999", "73988638", true);
         }
+
         @Test
         public void CIsNeitherSixNorNineSoRunSecondCheck() throws IOException {
             assertVocalinkTestCase("827101", "28748352", true);
@@ -146,10 +151,12 @@ public class VocalinkTestCases {
         public void WherePassesModulusElevenButWouldFailModulusTen() throws IOException {
             assertVocalinkTestCase("074456", "12345112", true);
         }
+
         @Test
         public void WherePassesModulusElevenButWouldPassModulusTen() throws IOException {
             assertVocalinkTestCase("070116", "34012583", true);
         }
+
         @Test
         public void WhereFailsModulusElevenButPassesModulusTen() throws IOException {
             assertVocalinkTestCase("074456", "11104102", true);
@@ -157,7 +164,9 @@ public class VocalinkTestCases {
     }
 
     public static class ExceptionFourteen {
-        /**Listed in the pdf as example one on page 19 of v 4.30 **/
+        /**
+         * Listed in the pdf as example one on page 19 of v 4.30
+         **/
         @Test
         public void WhereTheFirstCheckPasses() throws IOException {
             assertVocalinkTestCase("180002", "98093517", true);
@@ -173,10 +182,12 @@ public class VocalinkTestCases {
     public void PASS_MODULUS_10_check() throws IOException {
         assertVocalinkTestCase("089999", "66374958", true);
     }
+
     @Test
     public void PASS_MODULUS_11_check() throws IOException {
         assertVocalinkTestCase("107999", "88837491", true);
     }
+
     @Test
     public void PASS_MODULUS_11_AND_double_alternate_checks() throws IOException {
         assertVocalinkTestCase("202959", "63748472", true);
@@ -186,14 +197,17 @@ public class VocalinkTestCases {
     public void PASS_MODULUS_11_check_AND_fail_DOUBLE_alternate_check() throws IOException {
         assertVocalinkTestCase("203099", "66831036", false);
     }
+
     @Test
     public void FAIL_modulus_11_check_AND_pass_DOUBLE_alternate_check() throws IOException {
         assertVocalinkTestCase("203099", "58716970", false);
     }
+
     @Test
     public void FAIL_modulus_10_check() throws IOException {
         assertVocalinkTestCase("089999", "66374959", false);
     }
+
     @Test
     public void FAIL_modulus_11_check() throws IOException {
         assertVocalinkTestCase("107999", "88837493", false);

@@ -20,10 +20,11 @@ public final class ModulusElevenCheck {
 
         if (selectedRow.isException(4)) {
             return remainder == exceptionFourCheckDigit(params);
-        }
-        else {
+        } else {
             boolean result = remainder == 0;
-            if (result) { return true; }
+            if (result) {
+                return true;
+            }
 
             return new LloydsAlternateModulusElevenCheck().check(params, rowSelector);
         }
@@ -32,7 +33,7 @@ public final class ModulusElevenCheck {
     private int exceptionFourCheckDigit(ModulusCheckParams params) {
         int g = params.account.getNumberAt(BankAccount.G);
         int h = params.account.getNumberAt(BankAccount.H);
-        return Integer.parseInt(String.format("%s%s",g,h));
+        return Integer.parseInt(String.format("%s%s", g, h));
     }
 
 }

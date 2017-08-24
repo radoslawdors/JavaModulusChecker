@@ -25,8 +25,8 @@ class NonStandardAccounts {
      * the last eight digits of the account number only.
      */
     private static String[] CorrectForSantander(String sortCode, String accountNumber) {
-        if (accountNumber.length()!=9) {
-            return new String[] {sortCode, accountNumber};
+        if (accountNumber.length() != 9) {
+            return new String[]{sortCode, accountNumber};
         }
 
         return new String[]{
@@ -46,7 +46,7 @@ class NonStandardAccounts {
 
     /**
      * NatWest have ten digit account numbers
-     *
+     * <p>
      * Use the last eight digits only. If there is a hyphen
      * in the account number between the second and
      * third numbers this should be ignored.

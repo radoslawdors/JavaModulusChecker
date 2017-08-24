@@ -1,55 +1,55 @@
 package com.github.pauldambra.moduluschecker;
 
+import com.github.pauldambra.moduluschecker.chain.FirstModulusCheckRouter;
+import com.github.pauldambra.moduluschecker.chain.ModulusChainLink;
+import com.github.pauldambra.moduluschecker.chain.SecondModulusCheckRouter;
 import com.github.pauldambra.moduluschecker.chain.gates.*;
 import com.github.pauldambra.moduluschecker.chain.transformers.ExceptionEightAccountTransformer;
 import com.github.pauldambra.moduluschecker.chain.transformers.ExceptionSevenAccountTransformer;
 import com.github.pauldambra.moduluschecker.chain.transformers.ExceptionTenAccountTransformer;
 import com.github.pauldambra.moduluschecker.valacdosFile.ModulusWeightRows;
-import com.github.pauldambra.moduluschecker.chain.FirstModulusCheckRouter;
-import com.github.pauldambra.moduluschecker.chain.ModulusChainLink;
-import com.github.pauldambra.moduluschecker.chain.SecondModulusCheckRouter;
 
 final class ModulusCheckingChain {
     /**
      * AtLeastOneWeightRowGate
-     *         |
-     *         V
+     * |
+     * V
      * ExceptionSixGate
-     *         |
-     *         V
+     * |
+     * V
      * ExceptionSevenAccountTransformer
-     *         |
-     *         V
+     * |
+     * V
      * ExceptionEightAccountTransformer
-     *         |
-     *         V
+     * |
+     * V
      * ExceptionTenAccountTransformer
-     *         |
-     *         V
+     * |
+     * V
      * FirstModulusCheckRouter
-     *         |
-     *         V
+     * |
+     * V
      * SecondCheckRequiredGate
-     *         |
-     *         V
+     * |
+     * V
      * ExceptionTwoGate
-     *         |
-     *         V
+     * |
+     * V
      * ExceptionFourteenGate
-     *         |
-     *         V
+     * |
+     * V
      * ExceptionTwoAndNineGate
-     *         |
-     *         V
+     * |
+     * V
      * ExceptionSevenAccountTransformer
-     *         |
-     *         V
+     * |
+     * V
      * ExceptionEightAccountTransformer
-     *         |
-     *         V
+     * |
+     * V
      * ExceptionThreeGate
-     *         |
-     *         V
+     * |
+     * V
      * SecondModulusCheckRouter
      */
     static ModulusChainLink create(ModulusWeightRows weightRows, SortCodeSubstitution sortCodeSubstitution) {

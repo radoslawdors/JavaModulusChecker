@@ -30,10 +30,10 @@ public class ExceptionFourteenGate implements ModulusChainLink {
         }
 
         return ModulusResult.firstCheckPassed(params.modulusResult)
-            ? new ModulusResult(Optional.of(true), Optional.empty())
-            : ModulusResult.withSecondResult(
-                    params.modulusResult,
-                    new ExceptionFourteenModulusElevenCheck().check(params));
+                ? new ModulusResult(Optional.of(true), Optional.empty())
+                : ModulusResult.withSecondResult(
+                params.modulusResult,
+                new ExceptionFourteenModulusElevenCheck().check(params));
     }
 
 }

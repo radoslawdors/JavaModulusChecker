@@ -7,7 +7,9 @@ import java.util.Optional;
 
 public class ModulusResult {
 
-    /** the default is for a check to pass **/
+    /**
+     * the default is for a check to pass
+     **/
     public static final ModulusResult PASSES = new ModulusResult(Optional.of(true), Optional.of(true));
 
     public static final List<Integer> exceptionsThatRequireSecondCheck = ImmutableList.of(2, 5, 9, 10, 11, 12, 13, 14);
@@ -59,13 +61,13 @@ public class ModulusResult {
     public Boolean processResults() {
         if (firstCheck()) {
             return secondCheckResult.isPresent()
-                ? processTwoCheckResult()
-                : firstCheck();
+                    ? processTwoCheckResult()
+                    : firstCheck();
         }
 
         return exceptionsThatRequireSecondCheck.contains(firstException.orElse(-1))
-            ? processTwoCheckResult()
-            : false;
+                ? processTwoCheckResult()
+                : false;
     }
 
     private Boolean processTwoCheckResult() {
@@ -113,9 +115,11 @@ public class ModulusResult {
     }
 
     public static ModulusResult copy(ModulusResult original) {
-        if (original == null) { return null; }
+        if (original == null) {
+            return null;
+        }
         return new ModulusResult(
-          original.firstCheckResult, original.secondCheckResult, original.firstException, original.secondException
+                original.firstCheckResult, original.secondCheckResult, original.firstException, original.secondException
         );
     }
 

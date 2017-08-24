@@ -20,9 +20,9 @@ public class DoubleAlternateTests {
         String an = "12345678";
         WeightRow row = new WeightRow(
                 ModulusAlgorithm.DOUBLE_ALTERNATE,
-                ImmutableList.of(2,1,2,1,2,1,2,1,2,1,2,1,2,1),
+                ImmutableList.of(2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1),
                 Optional.empty()
-                );
+        );
 
         ModulusCheckParams params = new ModulusCheckParams(
                 BankAccount.Of(sc, an),

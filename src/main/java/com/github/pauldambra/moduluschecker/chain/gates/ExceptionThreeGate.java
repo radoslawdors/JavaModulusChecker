@@ -17,13 +17,13 @@ public final class ExceptionThreeGate implements ModulusChainLink {
     @Override
     public ModulusResult check(ModulusCheckParams params) {
         if (canSkipForExceptionThree(params)) {
-           return ModulusResult.withSecondResult(params.modulusResult, null);
+            return ModulusResult.withSecondResult(params.modulusResult, null);
         }
         return next.check(params);
     }
 
     private boolean canSkipForExceptionThree(ModulusCheckParams params) {
         int c = params.account.getNumberAt(BankAccount.C);
-        return c == 6 || c ==9;
+        return c == 6 || c == 9;
     }
 }

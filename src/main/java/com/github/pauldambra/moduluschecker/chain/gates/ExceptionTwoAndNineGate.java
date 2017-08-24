@@ -17,7 +17,7 @@ public final class ExceptionTwoAndNineGate implements ModulusChainLink {
     @Override
     public ModulusResult check(ModulusCheckParams params) {
         if (isExceptionTwoAndNine(params)
-                &&firstCheckSucceeded(params)) {
+                && firstCheckSucceeded(params)) {
             return params.modulusResult.get();
         }
         return next.check(params);

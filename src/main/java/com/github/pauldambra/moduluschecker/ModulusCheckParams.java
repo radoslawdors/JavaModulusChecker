@@ -29,10 +29,10 @@ public final class ModulusCheckParams {
 
     public ModulusCheckParams withAccount(BankAccount bankAccount) {
         return new ModulusCheckParams(
-            bankAccount,
-            firstWeightRow,
-            secondWeightRow,
-            modulusResult
+                bankAccount,
+                firstWeightRow,
+                secondWeightRow,
+                modulusResult
         );
     }
 
